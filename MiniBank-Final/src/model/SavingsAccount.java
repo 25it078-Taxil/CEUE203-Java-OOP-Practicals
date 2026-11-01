@@ -1,0 +1,1 @@
+package model;public class SavingsAccount extends Account{private static final long serialVersionUID=1L;private final long minBalance;public SavingsAccount(String n,long b,long m){super(n,b);minBalance=m;}public double interestRate(){return 4.0;}public boolean canWithdraw(long a){return getBalance()-a>=minBalance;}public long getMinBalance(){return minBalance;}}

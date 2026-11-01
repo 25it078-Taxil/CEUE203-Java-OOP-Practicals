@@ -1,0 +1,1 @@
+package model;public class CurrentAccount extends Account{private static final long serialVersionUID=1L;private final long overdraftLimit;public CurrentAccount(String n,long b,long limit){super(n,b);overdraftLimit=limit;}public double interestRate(){return 0.0;}public boolean canWithdraw(long a){return getBalance()-a>=-overdraftLimit;}}

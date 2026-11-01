@@ -1,0 +1,1 @@
+package service;import java.nio.file.*;import java.io.*;public class TransactionLog{public static void append(String line){try{Path p=Path.of("data/transactions.log");Files.createDirectories(p.getParent());Files.writeString(p,line+System.lineSeparator(),StandardOpenOption.CREATE,StandardOpenOption.APPEND);}catch(IOException e){System.err.println("Log error: "+e.getMessage());}}}

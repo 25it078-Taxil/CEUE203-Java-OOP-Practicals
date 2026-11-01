@@ -1,0 +1,1 @@
+class DemoResource implements AutoCloseable{public void close(){System.out.println("Resource closed");}}public class AutoCloseDemo{public static void main(String[]x){try(DemoResource r=new DemoResource()){System.out.println("Using resource");throw new RuntimeException("Original failure");}catch(RuntimeException e){System.out.println("Caught: "+e.getMessage());}}}

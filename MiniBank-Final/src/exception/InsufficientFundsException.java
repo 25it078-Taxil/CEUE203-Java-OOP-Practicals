@@ -1,0 +1,1 @@
+package exception;public class InsufficientFundsException extends BankException{private final long shortfall;public InsufficientFundsException(long s){super("Insufficient funds; short by ₹"+s);shortfall=s;}public long getShortfall(){return shortfall;}}

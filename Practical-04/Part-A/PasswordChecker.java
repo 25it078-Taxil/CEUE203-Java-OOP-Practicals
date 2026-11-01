@@ -1,0 +1,1 @@
+public class PasswordChecker{static String strength(String p){int n=0;if(p.length()>=8)n++;if(p.matches(".*[A-Z].*"))n++;if(p.matches(".*[0-9].*"))n++;if(p.matches(".*[^A-Za-z0-9].*"))n++;return n<=1?"Weak":n<=3?"Medium":"Strong";}public static void main(String[]x){for(String p:new String[]{"abc","Abcd1234!","Hello12"})System.out.println(p+" -> "+strength(p));}}

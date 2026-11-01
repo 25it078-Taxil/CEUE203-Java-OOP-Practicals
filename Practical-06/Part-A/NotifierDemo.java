@@ -1,0 +1,1 @@
+@FunctionalInterface interface Notifier{void send(String message);}public class NotifierDemo{public static void main(String[]x){Notifier email=m->System.out.println("Email: "+m),sms=m->System.out.println("SMS: "+m);Notifier[] a={email,sms};for(Notifier n:a)n.send("Lab starts at 10 AM");}}

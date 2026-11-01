@@ -1,0 +1,1 @@
+import java.util.*;public class Leaderboard{public static void main(String[]x){Map<String,Integer> scores=Map.of("Asha",90,"Ravi",95,"Mira",95,"Jay",80);scores.entrySet().stream().sorted(Map.Entry.<String,Integer>comparingByValue().reversed().thenComparing(Map.Entry.comparingByKey())).limit(3).forEach(System.out::println);}}

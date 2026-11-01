@@ -1,0 +1,1 @@
+import java.util.*;public class CollectionsDemo{public static void main(String[]x){List<String> names=List.of("Riya","Aman","Riya","Zara","Aman");Set<String> unique=new LinkedHashSet<>(names);System.out.println("Unique="+unique.size());unique.stream().limit(3).forEach(System.out::println);}}

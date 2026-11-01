@@ -1,0 +1,1 @@
+class Counter{int value=0;synchronized void increment(){value++;}}public class CounterRace{public static void main(String[]x)throws Exception{Counter c=new Counter();Thread[] t=new Thread[10];for(int i=0;i<t.length;i++){t[i]=new Thread(()->{for(int j=0;j<10000;j++)c.increment();});t[i].start();}for(Thread q:t)q.join();System.out.println("Expected=100000, Actual="+c.value);}}
